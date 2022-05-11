@@ -1,0 +1,10 @@
+<div class="grid-container">
+    <% @groups.each_with_index do |group, index| %>
+        <div class="grid-item"> 
+            <h3>Group <%= index + 1 %></h3>
+            <% group.each do |student| %>
+                <li><%= "#{student.name} - #{student.program}" %></li>
+            <% end %>
+        </div>
+    <% end %>
+</div>
